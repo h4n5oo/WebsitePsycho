@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psychotherapeutische Praxis – Kamenz</title>
-  <meta name="description" content="Psychotherapeutische Praxis in Kamenz. Begleitung für Privatpatient:innen, Beihilfeberechtigte und Selbstzahlende.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Psychotherapeutische Praxis – Dresden</title>
+  <meta name="description" content="Psychotherapeutische Privatpraxis in Dresden. Begleitung für Privatpatient:innen, Beihilfeberechtigte und Selbstzahlende.">
   <style>
-    :root,[data-theme="light"]{
+    :root{
       --color-bg:#f8f6f2;--color-surface:#faf9f6;--color-surface-2:#fdfcfa;
       --color-surface-offset:#f2ede8;--color-divider:#e2ddd8;--color-border:#d8d3cc;
       --color-text:#2c2820;--color-text-muted:#706b63;--color-text-faint:#b0a89e;
@@ -27,23 +24,13 @@
       --text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);
       --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
       --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
-      --font-display:'Lora',Georgia,serif;
-      --font-body:'Inter','Helvetica Neue',sans-serif;
+      --font-display:'Palatino Linotype','Book Antiqua',Palatino,Georgia,serif;
+      --font-body:system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
       --shadow-sm:0 1px 2px rgba(44,40,32,0.06);
       --shadow-md:0 4px 16px rgba(44,40,32,0.09);
       --shadow-lg:0 12px 32px rgba(44,40,32,0.13);
       --transition:180ms cubic-bezier(0.16,1,0.3,1);
       --content-default:900px;--content-wide:1160px;
-    }
-    [data-theme="dark"]{
-      --color-bg:#1a1816;--color-surface:#1f1d1b;--color-surface-2:#242220;
-      --color-surface-offset:#1d1b19;--color-divider:#2e2c2a;--color-border:#3a3835;
-      --color-text:#cdc9c3;--color-text-muted:#7a7570;--color-text-faint:#5a5652;
-      --color-text-inverse:#1f1d1b;
-      --color-primary:#7fa898;--color-primary-hover:#5d8a7a;
-      --color-primary-active:#3d6e5e;--color-primary-highlight:#2a3d38;
-      --shadow-sm:0 1px 2px rgba(0,0,0,0.2);--shadow-md:0 4px 12px rgba(0,0,0,0.3);
-      --shadow-lg:0 12px 32px rgba(0,0,0,0.4);
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -56,9 +43,7 @@
     button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
     ::selection{background:var(--color-primary-highlight);color:var(--color-text)}
     :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
-    /* NAV */
     .nav{position:sticky;top:0;z-index:100;background:rgba(248,246,242,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--color-divider);padding:var(--space-4) var(--space-6)}
-    [data-theme="dark"] .nav{background:rgba(26,24,22,0.92)}
     .nav-inner{max-width:var(--content-wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-8)}
     .nav-logo{display:flex;align-items:center;gap:var(--space-3);font-family:var(--font-display);font-size:var(--text-base);color:var(--color-text);font-weight:500;letter-spacing:0.01em}
     .nav-links{display:flex;align-items:center;gap:var(--space-6);list-style:none}
@@ -66,8 +51,6 @@
     .nav-links a:hover{color:var(--color-text)}
     .nav-cta{background:var(--color-primary);color:var(--color-text-inverse) !important;padding:var(--space-2) var(--space-5);border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:500;transition:background var(--transition)}
     .nav-cta:hover{background:var(--color-primary-hover) !important;color:var(--color-text-inverse) !important}
-    .theme-toggle{width:36px;height:36px;border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);border:1px solid var(--color-border);transition:color var(--transition),border-color var(--transition)}
-    .theme-toggle:hover{color:var(--color-text)}
     .nav-mobile-toggle{display:none}
     @media(max-width:768px){
       .nav-links{display:none}
@@ -75,12 +58,10 @@
       .nav-mobile-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--radius-md);color:var(--color-text-muted)}
       .nav{position:relative}
     }
-    /* LAYOUT */
     .container{max-width:var(--content-default);margin-inline:auto;padding-inline:var(--space-6)}
     .container--wide{max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6)}
     .section{padding-block:clamp(var(--space-12),7vw,var(--space-24))}
     .section--alt{background:var(--color-surface)}
-    /* HERO */
     .hero{padding-block:clamp(var(--space-20),10vw,var(--space-24)) clamp(var(--space-16),8vw,var(--space-20));border-bottom:1px solid var(--color-divider)}
     .hero-inner{max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center}
     .hero-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-4)}
@@ -100,19 +81,16 @@
     .hero-card p{font-size:var(--text-xs);color:var(--color-text-muted);max-width:none;line-height:1.6}
     .hero-cards-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
-    /* SECTION TITLES */
     .section-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-3)}
     .section-title{font-size:var(--text-xl);font-weight:400;margin-bottom:var(--space-4);font-style:italic}
     .section-title em{font-style:normal;font-weight:600}
     .section-intro{font-size:var(--text-base);color:var(--color-text-muted);margin-bottom:var(--space-10);line-height:1.8}
-    /* ANGEBOT */
     .angebot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:var(--space-4)}
     .angebot-card{background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-xl);padding:var(--space-6);transition:box-shadow var(--transition),transform var(--transition)}
     .angebot-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
     .angebot-card h3{font-size:var(--text-base);font-weight:600;font-family:var(--font-body);margin-bottom:var(--space-2);color:var(--color-text)}
     .angebot-card p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;max-width:none}
     .angebot-dot{width:8px;height:8px;border-radius:var(--radius-full);background:var(--color-primary);margin-bottom:var(--space-4)}
-    /* UEBER MICH */
     .ueber-inner{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-16);align-items:start}
     .ueber-aside{position:sticky;top:calc(5rem + var(--space-8))}
     .ueber-portrait{width:100%;aspect-ratio:3/4;background:var(--color-surface-offset);border-radius:var(--radius-xl);border:1px solid var(--color-divider);display:flex;align-items:center;justify-content:center;color:var(--color-text-faint);font-size:var(--text-sm)}
@@ -121,7 +99,6 @@
     .ueber-tags{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-8)}
     .tag{background:var(--color-surface-offset);color:var(--color-text-muted);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-size:var(--text-xs);border:1px solid var(--color-divider)}
     @media(max-width:768px){.ueber-inner{grid-template-columns:1fr}.ueber-aside{position:static}}
-    /* ABLAUF */
     .ablauf-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8) var(--space-16)}
     .ablauf-step{display:flex;gap:var(--space-4);align-items:flex-start}
     .ablauf-num{width:32px;height:32px;border-radius:var(--radius-full);border:1.5px solid var(--color-primary);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;color:var(--color-primary);flex-shrink:0;margin-top:2px}
@@ -131,7 +108,6 @@
     .kosten-item h4{font-size:var(--text-sm);font-weight:600;font-family:var(--font-body);color:var(--color-text);margin-bottom:var(--space-2)}
     .kosten-item p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:none;line-height:1.7}
     @media(max-width:768px){.ablauf-grid{grid-template-columns:1fr}.kosten-box{grid-template-columns:1fr}}
-    /* KONTAKT */
     .kontakt-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16)}
     .kontakt-info h2{font-size:var(--text-xl);font-weight:400;font-style:italic;margin-bottom:var(--space-4)}
     .kontakt-info p{color:var(--color-text-muted);margin-bottom:var(--space-8);line-height:1.8}
@@ -148,8 +124,7 @@
     .form-group textarea{min-height:120px}
     .form-note{font-size:var(--text-xs);color:var(--color-text-faint);line-height:1.6}
     @media(max-width:768px){.kontakt-inner{grid-template-columns:1fr}}
-    /* FOOTER */
-    .footer{border-top:1px solid var(--color-divider);padding:var(--space-8) var(--space-6);}
+    .footer{border-top:1px solid var(--color-divider);padding:var(--space-8) var(--space-6)}
     .footer-inner{max-width:var(--content-wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap}
     .footer-copy{font-size:var(--text-xs);color:var(--color-text-faint)}
     .footer-links{display:flex;gap:var(--space-6);list-style:none}
@@ -158,7 +133,6 @@
   </style>
 </head>
 <body>
-  <!-- NAV -->
   <nav class="nav" role="navigation" aria-label="Hauptnavigation">
     <div class="nav-inner">
       <a href="#start" class="nav-logo">
@@ -168,20 +142,18 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#angebot">Angebot</a></li>
         <li><a href="#ueber-mich">Über mich</a></li>
-        <li><a href="#ablauf">Ablauf & Kosten</a></li>
+        <li><a href="#ablauf">Ablauf &amp; Kosten</a></li>
         <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
-        <li><button class="theme-toggle" data-theme-toggle aria-label="Dunkelmodus aktivieren"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li>
       </ul>
       <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menü öffnen" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     </div>
   </nav>
 
   <main id="main">
-    <!-- HERO -->
     <section class="hero" id="start">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-label">Psychotherapeutische Praxis – Kamenz</p>
+          <p class="hero-label">Psychotherapeutische Privatpraxis – Dresden</p>
           <h1>Begleitung in schwierigen <em>Lebensphasen</em></h1>
           <p class="hero-sub">In belastenden Situationen kann ein geschützter Raum helfen, wieder Orientierung zu finden. Ich begleite Sie einfühlsam, respektvoll und auf Augenhöhe.</p>
           <div class="hero-actions">
@@ -211,24 +183,22 @@
       </div>
     </section>
 
-    <!-- ANGEBOT -->
     <section class="section" id="angebot">
       <div class="container">
         <p class="section-label">Behandlungsschwerpunkte</p>
         <h2 class="section-title">Womit ich <em>helfen kann</em></h2>
         <p class="section-intro">Ich unterstütze Erwachsene bei einer Vielzahl psychischer Belastungen. Die folgenden Bereiche bilden meine therapeutischen Schwerpunkte.</p>
         <div class="angebot-grid">
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Depressionen & Stimmungstiefs</h3><p>Anhaltende Niedergeschlagenheit, Antriebslosigkeit und Freudlosigkeit – gemeinsam finden wir neue Wege heraus.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Angst & Panikstörungen</h3><p>Behandlung von generalisierten Ängsten, sozialen Phobien, Panikattacken und spezifischen Phobien.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Burnout & Erschöpfung</h3><p>Chronische Überlastung, innere Leere und das Gefühl, nicht mehr aufzuhören zu können – für Sie analysieren wir die Ursachen und stärken Ihre Ressourcen.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Depressionen &amp; Stimmungstiefs</h3><p>Anhaltende Niedergeschlagenheit, Antriebslosigkeit und Freudlosigkeit – gemeinsam finden wir neue Wege heraus.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Angst &amp; Panikstörungen</h3><p>Behandlung von generalisierten Ängsten, sozialen Phobien, Panikattacken und spezifischen Phobien.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Burnout &amp; Erschöpfung</h3><p>Chronische Überlastung, innere Leere und das Gefühl, nicht mehr aufzuhören zu können – Ursachen analysieren, Ressourcen stärken.</p></div>
           <div class="angebot-card"><div class="angebot-dot"></div><h3>Traumatische Erlebnisse</h3><p>Schonende Begleitung bei Belastungsstörungen nach einschneidenden Erfahrungen (PTBS und akute Belastungsreaktionen).</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Lebenskrisen & Trauer</h3><p>Verlust, Trennung, Veränderungen, Sinnfragen – ich begleite Sie dabei, wieder Boden unter den Füßen zu finden.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Schlafstörungen & somatoforme Beschwerden</h3><p>Wenn Körper und Seele gemeinsam leiden: Behandlung bei Schlafproblemen, Schmerzen ohne organischen Befund und Erschöpfungssyndromen.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Lebenskrisen &amp; Trauer</h3><p>Verlust, Trennung, Veränderungen, Sinnfragen – ich begleite Sie dabei, wieder Boden unter den Füßen zu finden.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Schlafstörungen &amp; somatoforme Beschwerden</h3><p>Wenn Körper und Seele gemeinsam leiden: Schlafprobleme, Schmerzen ohne organischen Befund, Erschöpfungssyndrome.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- UEBER MICH -->
     <section class="section section--alt" id="ueber-mich">
       <div class="container">
         <div class="ueber-inner">
@@ -239,10 +209,10 @@
           </div>
           <div class="ueber-content">
             <p class="section-label">Über mich</p>
-            <h2>Persönlichkeit & <em>Haltung</em></h2>
-            <p>Ich bin approbierte Psychotherapeutin und arbeite seit mehreren Jahren in eigener Praxis. Mein Ansatz ist geprägt von Respekt, Neugier und dem Glauben daran, dass Veränderung möglich ist – in jedem Lebensalter und in jeder Situation.</p>
+            <h2>Persönlichkeit &amp; <em>Haltung</em></h2>
+            <p>Ich bin approbierte Psychotherapeutin und arbeite seit mehreren Jahren in eigener Praxis in Dresden. Mein Ansatz ist geprägt von Respekt, Neugier und dem Glauben daran, dass Veränderung möglich ist – in jedem Lebensalter und in jeder Situation.</p>
             <p>Therapeutisch arbeite ich vorwiegend verhaltenstherapeutisch, integriere aber auch tiefenpsychologische und humanistische Elemente, je nachdem, was für Sie persönlich am hilfreichsten ist. Mir ist es wichtig, dass Sie sich gesehen und verstanden fühlen – nicht klassifiziert.</p>
-            <p>Vor meiner Niederlassung in Kamenz habe ich in psychiatrischen Kliniken und ambulanten Einrichtungen gearbeitet und dabei ein breites Spektrum psychischer Erkrankungen kennengelernt. Diese Erfahrung fließt in meine tägliche Arbeit ein.</p>
+            <p>Vor meiner Niederlassung in Dresden habe ich in psychiatrischen Kliniken und ambulanten Einrichtungen gearbeitet und dabei ein breites Spektrum psychischer Erkrankungen kennengelernt. Diese Erfahrung fließt in meine tägliche Arbeit ein.</p>
             <div class="ueber-tags">
               <span class="tag">Approbierte Psychotherapeutin</span>
               <span class="tag">Kognitive Verhaltenstherapie</span>
@@ -255,21 +225,20 @@
       </div>
     </section>
 
-    <!-- ABLAUF & KOSTEN -->
     <section class="section" id="ablauf">
       <div class="container">
         <p class="section-label">So funktioniert es</p>
-        <h2 class="section-title">Ablauf & <em>Kosten</em></h2>
+        <h2 class="section-title">Ablauf &amp; <em>Kosten</em></h2>
         <p class="section-intro">Der erste Schritt muss kein großer sein. Hier finden Sie alle Informationen zum Ablauf einer Behandlung und zur Kostenerstattung.</p>
         <div class="ablauf-grid">
           <div class="ablauf-step"><div class="ablauf-num">1</div><div><h3>Erstanfrage</h3><p>Sie nehmen per Telefon oder E-Mail Kontakt auf. Ich melde mich in der Regel innerhalb von zwei Werktagen.</p></div></div>
           <div class="ablauf-step"><div class="ablauf-num">2</div><div><h3>Erstgespräch (Probatorik)</h3><p>Im ersten Gespräch lernen wir uns kennen. Ich höre zu, Sie erzählen, was Sie bewegt – ohne Erwartungsdruck.</p></div></div>
-          <div class="ablauf-step"><div class="ablauf-num">3</div><div><h3>Diagnostik & Zielfindung</h3><p>Gemeinsam klären wir Ihr Anliegen, mögliche Diagnosen und was Sie sich von der Therapie erhoffen.</p></div></div>
+          <div class="ablauf-step"><div class="ablauf-num">3</div><div><h3>Diagnostik &amp; Zielfindung</h3><p>Gemeinsam klären wir Ihr Anliegen, mögliche Diagnosen und was Sie sich von der Therapie erhoffen.</p></div></div>
           <div class="ablauf-step"><div class="ablauf-num">4</div><div><h3>Therapieverlauf</h3><p>Wir arbeiten regelmäßig zusammen – in der Regel 50 Minuten pro Stunde, wöchentlich oder zweiwöchentlich.</p></div></div>
         </div>
         <div class="kosten-box">
           <div class="kosten-item">
-            <h4>Privatpatienten & Beihilfe</h4>
+            <h4>Privatpatienten &amp; Beihilfe</h4>
             <p>Die Kosten werden über Ihre private Krankenversicherung oder Beihilfestelle abgerechnet. Die Honorarhöhe richtet sich nach der Gebührenordnung für Psychotherapeuten (GOP). Bitte prüfen Sie vorab den Leistungsumfang Ihres Versicherungsvertrages.</p>
           </div>
           <div class="kosten-item">
@@ -280,7 +249,6 @@
       </div>
     </section>
 
-    <!-- KONTAKT -->
     <section class="section section--alt" id="kontakt">
       <div class="container">
         <div class="kontakt-inner">
@@ -299,7 +267,7 @@
               </div>
               <div class="kontakt-row">
                 <div class="kontakt-row-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                <div class="kontakt-row-text"><strong>Adresse</strong>[Straße & Nr.], [PLZ] Kamenz</div>
+                <div class="kontakt-row-text"><strong>Adresse</strong>[Straße &amp; Nr.], [PLZ] Dresden</div>
               </div>
             </div>
           </div>
@@ -316,10 +284,9 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-copy">&copy; 2026 Psychotherapeutische Praxis Kamenz</p>
+      <p class="footer-copy">&copy; 2026 Psychotherapeutische Privatpraxis Dresden</p>
       <ul class="footer-links">
         <li><a href="impressum-datenschutz.html#impressum">Impressum</a></li>
         <li><a href="impressum-datenschutz.html#datenschutz">Datenschutz</a></li>
@@ -329,27 +296,17 @@
 
   <script>
     (function(){
-      const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
-      let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
-      r.setAttribute('data-theme',d);
-      if(t)t.addEventListener('click',()=>{
-        d=d==='dark'?'light':'dark';
-        r.setAttribute('data-theme',d);
-        t.setAttribute('aria-label','Zu '+(d==='dark'?'Hellmodus':'Dunkelmodus')+' wechseln');
-        t.innerHTML=d==='dark'
-          ?'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-          :'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      });
       const btn=document.getElementById('mobile-toggle'),nav=document.getElementById('nav-links');
       if(btn&&nav)btn.addEventListener('click',()=>{
         const open=nav.classList.toggle('open');
         btn.setAttribute('aria-expanded',open);
+        btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
       });
     })();
     function handleSubmit(e){
       e.preventDefault();
       const btn=e.target.querySelector('[type=submit]');
-      btn.textContent='Nachricht gesendet ✓';
+      btn.textContent='Nachricht gesendet \u2713';
       btn.disabled=true;
       btn.style.background='var(--color-primary-active)';
     }
