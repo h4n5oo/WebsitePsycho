@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psychotherapeutische Praxis – Dresden</title>
-  <meta name="description" content="Psychotherapeutische Privatpraxis in Dresden. Begleitung für Privatpatient:innen, Beihilfeberechtigte und Selbstzahlende.">
+  <title>Privatpraxis für Psychotherapie Kerstin Bauer – Dresden</title>
+  <meta name="description" content="Privatpraxis für Psychotherapie Dipl.-Psych. Kerstin Bauer in Dresden. Behandlung für Privatversicherte, Beihilfeberechtigte und Selbstzahler.">
   <style>
     :root{
       --color-bg:#f8f6f2;--color-surface:#faf9f6;--color-surface-2:#fdfcfa;
@@ -43,9 +43,11 @@
     button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
     ::selection{background:var(--color-primary-highlight);color:var(--color-text)}
     :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+
+    /* NAV */
     .nav{position:sticky;top:0;z-index:100;background:rgba(248,246,242,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--color-divider);padding:var(--space-4) var(--space-6)}
     .nav-inner{max-width:var(--content-wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-8)}
-    .nav-logo{display:flex;align-items:center;gap:var(--space-3);font-family:var(--font-display);font-size:var(--text-base);color:var(--color-text);font-weight:500;letter-spacing:0.01em}
+    .nav-logo{display:flex;align-items:center;gap:var(--space-3);font-family:var(--font-display);font-size:var(--text-sm);color:var(--color-text);font-weight:500;letter-spacing:0.01em;line-height:1.3}
     .nav-links{display:flex;align-items:center;gap:var(--space-6);list-style:none}
     .nav-links a{font-size:var(--text-sm);color:var(--color-text-muted);transition:color var(--transition)}
     .nav-links a:hover{color:var(--color-text)}
@@ -58,10 +60,18 @@
       .nav-mobile-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--radius-md);color:var(--color-text-muted)}
       .nav{position:relative}
     }
+
+    /* LAYOUT */
     .container{max-width:var(--content-default);margin-inline:auto;padding-inline:var(--space-6)}
     .container--wide{max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6)}
     .section{padding-block:clamp(var(--space-12),7vw,var(--space-24))}
     .section--alt{background:var(--color-surface)}
+    .section-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-3)}
+    .section-title{font-size:var(--text-xl);font-weight:400;margin-bottom:var(--space-4);font-style:italic}
+    .section-title em{font-style:normal;font-weight:600}
+    .section-intro{font-size:var(--text-base);color:var(--color-text-muted);margin-bottom:var(--space-10);line-height:1.8}
+
+    /* HERO */
     .hero{padding-block:clamp(var(--space-20),10vw,var(--space-24)) clamp(var(--space-16),8vw,var(--space-20));border-bottom:1px solid var(--color-divider)}
     .hero-inner{max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center}
     .hero-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-4)}
@@ -81,16 +91,16 @@
     .hero-card p{font-size:var(--text-xs);color:var(--color-text-muted);max-width:none;line-height:1.6}
     .hero-cards-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
-    .section-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-3)}
-    .section-title{font-size:var(--text-xl);font-weight:400;margin-bottom:var(--space-4);font-style:italic}
-    .section-title em{font-style:normal;font-weight:600}
-    .section-intro{font-size:var(--text-base);color:var(--color-text-muted);margin-bottom:var(--space-10);line-height:1.8}
-    .angebot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:var(--space-4)}
+
+    /* ANGEBOT */
+    .angebot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:var(--space-4)}
     .angebot-card{background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-xl);padding:var(--space-6);transition:box-shadow var(--transition),transform var(--transition)}
     .angebot-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
     .angebot-card h3{font-size:var(--text-base);font-weight:600;font-family:var(--font-body);margin-bottom:var(--space-2);color:var(--color-text)}
     .angebot-card p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;max-width:none}
     .angebot-dot{width:8px;height:8px;border-radius:var(--radius-full);background:var(--color-primary);margin-bottom:var(--space-4)}
+
+    /* ÜBER MICH */
     .ueber-inner{display:grid;grid-template-columns:1fr 2fr;gap:var(--space-16);align-items:start}
     .ueber-aside{position:sticky;top:calc(5rem + var(--space-8))}
     .ueber-portrait{width:100%;aspect-ratio:3/4;background:var(--color-surface-offset);border-radius:var(--radius-xl);border:1px solid var(--color-divider);display:flex;align-items:center;justify-content:center;color:var(--color-text-faint);font-size:var(--text-sm)}
@@ -99,15 +109,50 @@
     .ueber-tags{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-8)}
     .tag{background:var(--color-surface-offset);color:var(--color-text-muted);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);font-size:var(--text-xs);border:1px solid var(--color-divider)}
     @media(max-width:768px){.ueber-inner{grid-template-columns:1fr}.ueber-aside{position:static}}
+
+    /* WERDEGANG */
+    .werdegang-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:var(--space-8)}
+    .werdegang-item{display:grid;grid-template-columns:140px 1fr;gap:var(--space-6);padding:var(--space-5) 0;border-top:1px solid var(--color-divider)}
+    .werdegang-item:last-child{border-bottom:1px solid var(--color-divider)}
+    .werdegang-year{font-size:var(--text-xs);font-weight:600;color:var(--color-primary);padding-top:2px;letter-spacing:0.04em}
+    .werdegang-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;max-width:none}
+    @media(max-width:600px){.werdegang-item{grid-template-columns:1fr}.werdegang-year{margin-bottom:var(--space-1)}}
+
+    /* ABLAUF & KOSTEN */
     .ablauf-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8) var(--space-16)}
     .ablauf-step{display:flex;gap:var(--space-4);align-items:flex-start}
     .ablauf-num{width:32px;height:32px;border-radius:var(--radius-full);border:1.5px solid var(--color-primary);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:600;color:var(--color-primary);flex-shrink:0;margin-top:2px}
     .ablauf-step h3{font-size:var(--text-sm);font-weight:600;font-family:var(--font-body);margin-bottom:var(--space-1);color:var(--color-text)}
     .ablauf-step p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;max-width:none}
-    .kosten-box{margin-top:var(--space-12);background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-xl);padding:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8)}
-    .kosten-item h4{font-size:var(--text-sm);font-weight:600;font-family:var(--font-body);color:var(--color-text);margin-bottom:var(--space-2)}
-    .kosten-item p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:none;line-height:1.7}
-    @media(max-width:768px){.ablauf-grid{grid-template-columns:1fr}.kosten-box{grid-template-columns:1fr}}
+    @media(max-width:768px){.ablauf-grid{grid-template-columns:1fr}}
+
+    /* KOSTEN */
+    .kosten-box{margin-top:var(--space-12);background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-xl);padding:var(--space-8)}
+    .kosten-intro{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-8);line-height:1.75;max-width:68ch}
+    .kosten-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8)}
+    .kosten-item h4{font-size:var(--text-sm);font-weight:600;font-family:var(--font-body);color:var(--color-text);margin-bottom:var(--space-3)}
+    .kosten-item p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:none;line-height:1.75}
+    .kosten-table{width:100%;border-collapse:collapse;margin-top:var(--space-6)}
+    .kosten-table th{text-align:left;font-size:var(--text-xs);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-text-faint);padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--color-divider)}
+    .kosten-table td{font-size:var(--text-sm);color:var(--color-text-muted);padding:var(--space-3);border-bottom:1px solid var(--color-divider);vertical-align:top}
+    .kosten-table td:last-child{white-space:nowrap;font-weight:500;color:var(--color-text)}
+    .kosten-table tr:last-child td{border-bottom:none}
+    .ausfall-box{margin-top:var(--space-6);background:var(--color-surface-offset);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6)}
+    .ausfall-box p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:none;line-height:1.75}
+    @media(max-width:768px){.kosten-grid{grid-template-columns:1fr}}
+
+    /* FAQ */
+    .faq-list{display:flex;flex-direction:column;gap:0;margin-top:var(--space-8)}
+    .faq-item{border-top:1px solid var(--color-divider)}
+    .faq-item:last-child{border-bottom:1px solid var(--color-divider)}
+    .faq-question{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-5) 0;cursor:pointer;font-size:var(--text-base);font-weight:500;color:var(--color-text);background:none;border:none;width:100%;text-align:left;font-family:var(--font-body)}
+    .faq-question svg{flex-shrink:0;color:var(--color-text-faint);transition:transform var(--transition)}
+    .faq-item.open .faq-question svg{transform:rotate(45deg)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease}
+    .faq-item.open .faq-answer{max-height:300px}
+    .faq-answer p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.8;padding-bottom:var(--space-5);max-width:none}
+
+    /* KONTAKT */
     .kontakt-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16)}
     .kontakt-info h2{font-size:var(--text-xl);font-weight:400;font-style:italic;margin-bottom:var(--space-4)}
     .kontakt-info p{color:var(--color-text-muted);margin-bottom:var(--space-8);line-height:1.8}
@@ -116,14 +161,10 @@
     .kontakt-row-icon{width:36px;height:36px;border-radius:var(--radius-lg);background:var(--color-primary-highlight);display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0}
     .kontakt-row-text{font-size:var(--text-sm);color:var(--color-text-muted)}
     .kontakt-row-text strong{display:block;font-size:var(--text-xs);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:2px}
-    .kontakt-form{display:flex;flex-direction:column;gap:var(--space-4)}
-    .form-group{display:flex;flex-direction:column;gap:var(--space-2)}
-    .form-group label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-text-muted)}
-    .form-group input,.form-group textarea,.form-group select{width:100%;padding:var(--space-3) var(--space-4);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--color-text);font-family:var(--font-body);transition:border-color var(--transition),box-shadow var(--transition);resize:vertical}
-    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px var(--color-primary-highlight);outline:none}
-    .form-group textarea{min-height:120px}
-    .form-note{font-size:var(--text-xs);color:var(--color-text-faint);line-height:1.6}
+    .kontakt-note{margin-top:var(--space-6);font-size:var(--text-xs);color:var(--color-text-faint);line-height:1.7;max-width:36ch}
     @media(max-width:768px){.kontakt-inner{grid-template-columns:1fr}}
+
+    /* FOOTER */
     .footer{border-top:1px solid var(--color-divider);padding:var(--space-8) var(--space-6)}
     .footer-inner{max-width:var(--content-wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap}
     .footer-copy{font-size:var(--text-xs);color:var(--color-text-faint)}
@@ -133,160 +174,322 @@
   </style>
 </head>
 <body>
+
+  <a href="#main" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0">Zum Inhalt springen</a>
+
   <nav class="nav" role="navigation" aria-label="Hauptnavigation">
     <div class="nav-inner">
       <a href="#start" class="nav-logo">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M9 14c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="17" r="1.5" fill="currentColor"/></svg>
-        <span>Psychotherapeutische Praxis</span>
+        <span>Privatpraxis Kerstin Bauer</span>
       </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#angebot">Angebot</a></li>
         <li><a href="#ueber-mich">Über mich</a></li>
         <li><a href="#ablauf">Ablauf &amp; Kosten</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
       </ul>
-      <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menü öffnen" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
   <main id="main">
+
+    <!-- HERO -->
     <section class="hero" id="start">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-label">Psychotherapeutische Privatpraxis – Dresden</p>
-          <h1>Begleitung in schwierigen <em>Lebensphasen</em></h1>
-          <p class="hero-sub">In belastenden Situationen kann ein geschützter Raum helfen, wieder Orientierung zu finden. Ich begleite Sie einfühlsam, respektvoll und auf Augenhöhe.</p>
+          <p class="hero-label">Privatpraxis für Psychotherapie – Dresden</p>
+          <h1>Herzlich Willkommen bei <em>Kerstin Bauer</em></h1>
+          <p class="hero-sub">Manchmal geraten wir im Leben an einen Punkt, an welchem wir allein nicht mehr weiterkommen. Psychotherapie kann helfen, mit Belastungen besser umzugehen. Ich begleite Erwachsene in schwierigen Lebenssituationen mit wissenschaftlich fundierten Methoden und einer wertschätzenden, vertrauensvollen Haltung.</p>
           <div class="hero-actions">
-            <a href="#kontakt" class="btn btn-primary">Erstgespräch anfragen</a>
-            <a href="#angebot" class="btn btn-ghost">Angebot entdecken</a>
+            <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="#angebot" class="btn btn-ghost">Behandlungsangebot</a>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-cards-row">
             <div class="hero-card">
-              <div class="hero-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <div class="hero-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
               <h3>Vertrauensvoller Rahmen</h3>
-              <p>Offene Atmosphäre, absolute Vertraulichkeit</p>
+              <p>Absolute Vertraulichkeit, Schweigepflicht</p>
             </div>
             <div class="hero-card">
-              <div class="hero-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-              <h3>Flexible Termine</h3>
-              <p>Auch abends und am Wochenende nach Absprache</p>
+              <div class="hero-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <h3>Zeitnahe Termine</h3>
+              <p>Kein langer Warteliste-Stress</p>
             </div>
           </div>
           <div class="hero-card">
-            <div class="hero-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <h3>Privatpraxis – kein Kassensitz erforderlich</h3>
-            <p>Privatversicherte, Beihilfeberechtigte und Selbstzahlende werden ohne Wartezeit behandelt</p>
+            <div class="hero-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Privatpraxis – ohne Kassenbürokratie</h3>
+            <p>Für Privatversicherte, Beihilfeberechtigte und Selbstzahler – ohne Antragsformalitäten bei Krankenkassen</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ANGEBOT -->
     <section class="section" id="angebot">
       <div class="container">
         <p class="section-label">Behandlungsschwerpunkte</p>
-        <h2 class="section-title">Womit ich <em>helfen kann</em></h2>
-        <p class="section-intro">Ich unterstütze Erwachsene bei einer Vielzahl psychischer Belastungen. Die folgenden Bereiche bilden meine therapeutischen Schwerpunkte.</p>
+        <h2 class="section-title">Ich behandle <em>unter anderem</em></h2>
+        <p class="section-intro">Je nach Anliegen erfolgt die Behandlung im Rahmen einer Einzelpsychotherapie.</p>
         <div class="angebot-grid">
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Depressionen &amp; Stimmungstiefs</h3><p>Anhaltende Niedergeschlagenheit, Antriebslosigkeit und Freudlosigkeit – gemeinsam finden wir neue Wege heraus.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Angst &amp; Panikstörungen</h3><p>Behandlung von generalisierten Ängsten, sozialen Phobien, Panikattacken und spezifischen Phobien.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Burnout &amp; Erschöpfung</h3><p>Chronische Überlastung, innere Leere und das Gefühl, nicht mehr aufzuhören zu können – Ursachen analysieren, Ressourcen stärken.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Traumatische Erlebnisse</h3><p>Schonende Begleitung bei Belastungsstörungen nach einschneidenden Erfahrungen (PTBS und akute Belastungsreaktionen).</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Lebenskrisen &amp; Trauer</h3><p>Verlust, Trennung, Veränderungen, Sinnfragen – ich begleite Sie dabei, wieder Boden unter den Füßen zu finden.</p></div>
-          <div class="angebot-card"><div class="angebot-dot"></div><h3>Schlafstörungen &amp; somatoforme Beschwerden</h3><p>Wenn Körper und Seele gemeinsam leiden: Schlafprobleme, Schmerzen ohne organischen Befund, Erschöpfungssyndrome.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Depressionen, Burnout &amp; Erschöpfungssyndrom</h3><p>Anhaltende Niedergeschlagenheit, Antriebslosigkeit, innere Leere und chronische Überlastung.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Angst- und Panikstörungen</h3><p>Generalisierte Ängste, Panikattacken, soziale Phobien und spezifische Phobien.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Anpassungsstörungen &amp; Belastungsreaktionen</h3><p>Schwierige Lebensereignisse, Krisen und akute Belastungssituationen.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Traumafolgestörungen</h3><p>Schonende Begleitung nach einschneidenden Erfahrungen und posttraumatischen Belastungen.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Zwangsstörungen</h3><p>Zwangsgedanken und Zwangshandlungen, die den Alltag beeinträchtigen.</p></div>
+          <div class="angebot-card"><div class="angebot-dot"></div><h3>Psychosomatische Störungen &amp; weitere</h3><p>Wenn Körper und Seele gemeinsam leiden sowie weitere psychische Erkrankungen.</p></div>
         </div>
       </div>
     </section>
 
+    <!-- ÜBER MICH -->
     <section class="section section--alt" id="ueber-mich">
       <div class="container">
         <div class="ueber-inner">
           <div class="ueber-aside">
-            <div class="ueber-portrait" role="img" aria-label="Portrait der Therapeutin">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div class="ueber-portrait" role="img" aria-label="Foto von Kerstin Bauer (Platzhalter)">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
           </div>
           <div class="ueber-content">
             <p class="section-label">Über mich</p>
-            <h2>Persönlichkeit &amp; <em>Haltung</em></h2>
-            <p>Ich bin approbierte Psychotherapeutin und arbeite seit mehreren Jahren in eigener Praxis in Dresden. Mein Ansatz ist geprägt von Respekt, Neugier und dem Glauben daran, dass Veränderung möglich ist – in jedem Lebensalter und in jeder Situation.</p>
-            <p>Therapeutisch arbeite ich vorwiegend verhaltenstherapeutisch, integriere aber auch tiefenpsychologische und humanistische Elemente, je nachdem, was für Sie persönlich am hilfreichsten ist. Mir ist es wichtig, dass Sie sich gesehen und verstanden fühlen – nicht klassifiziert.</p>
-            <p>Vor meiner Niederlassung in Dresden habe ich in psychiatrischen Kliniken und ambulanten Einrichtungen gearbeitet und dabei ein breites Spektrum psychischer Erkrankungen kennengelernt. Diese Erfahrung fließt in meine tägliche Arbeit ein.</p>
+            <h2>Kerstin Bauer – <em>Psychologische Psychotherapeutin</em></h2>
+            <p>Mein Name ist Kerstin Bauer. Meine therapeutische Arbeit basiert auf wissenschaftlich anerkannten Verfahren sowie einer respektvollen und empathischen Zusammenarbeit. Mir ist wichtig, gemeinsam mit Ihnen einen individuellen Behandlungsweg zu entwickeln, welcher zu Ihren persönlichen Zielen passt.</p>
+            <p>Ich bin Psychologische Psychotherapeutin mit Approbation und Fachkundenachweis Verhaltenstherapie. Seit Juli 2026 führe ich meine Privatpraxis in Dresden. Zuvor war ich mehrere Jahre als Psychologische Psychotherapeutin am Städtischen Klinikum Dresden tätig und habe ein breites klinisches Erfahrungsspektrum aufgebaut.</p>
+
+            <h3 style="font-size:var(--text-base);font-weight:600;margin-top:var(--space-10);margin-bottom:var(--space-2);font-family:var(--font-body)">Beruflicher Werdegang</h3>
+            <ul class="werdegang-list" role="list">
+              <li class="werdegang-item">
+                <span class="werdegang-year">ab 07/2026</span>
+                <span class="werdegang-desc">Privatpraxis für Psychotherapie in Dresden</span>
+              </li>
+              <li class="werdegang-item">
+                <span class="werdegang-year">seit 2021</span>
+                <span class="werdegang-desc">Halber Kassensitz in Kamenz</span>
+              </li>
+              <li class="werdegang-item">
+                <span class="werdegang-year">2012–2021</span>
+                <span class="werdegang-desc">Psychologische Psychotherapeutin im Städtischen Klinikum Dresden, Standort Weißer Hirsch – Psychiatrische Tagesklinik</span>
+              </li>
+              <li class="werdegang-item">
+                <span class="werdegang-year">2010–2018</span>
+                <span class="werdegang-desc">Honorartätigkeit als Psychologin in der Klinik für Kinder- und Jugendmedizin der TU Dresden – Betreuung krebskranker Kinder und ihrer Familien</span>
+              </li>
+              <li class="werdegang-item">
+                <span class="werdegang-year">2010–2012</span>
+                <span class="werdegang-desc">Psychologische Psychotherapeutin auf der akut- und allgemeinpsychiatrischen Station, Städtisches Klinikum Dresden, Standort Weißer Hirsch</span>
+              </li>
+              <li class="werdegang-item">
+                <span class="werdegang-year">2008–2009</span>
+                <span class="werdegang-desc">Praktische Tätigkeit auf der Psychotherapie- und Akutstation des Städtischen Klinikums Dresden im Rahmen der Ausbildung zur Verhaltenstherapeutin</span>
+              </li>
+              <li class="werdegang-item">
+                <span class="werdegang-year">2008</span>
+                <span class="werdegang-desc">Abschluss des Psychologiestudiums an der Technischen Universität Dresden</span>
+              </li>
+            </ul>
+
             <div class="ueber-tags">
-              <span class="tag">Approbierte Psychotherapeutin</span>
-              <span class="tag">Kognitive Verhaltenstherapie</span>
-              <span class="tag">Tiefenpsychologie</span>
-              <span class="tag">Traumatherapie</span>
-              <span class="tag">Achtsamkeitsbasierte Verfahren</span>
+              <span class="tag">Approbierte Psychologische Psychotherapeutin</span>
+              <span class="tag">Fachkunde Verhaltenstherapie</span>
+              <span class="tag">Approbation 2013</span>
+              <span class="tag">Klinische Erfahrung seit 2008</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ABLAUF -->
     <section class="section" id="ablauf">
       <div class="container">
-        <p class="section-label">So funktioniert es</p>
+        <p class="section-label">So läuft es ab</p>
         <h2 class="section-title">Ablauf &amp; <em>Kosten</em></h2>
-        <p class="section-intro">Der erste Schritt muss kein großer sein. Hier finden Sie alle Informationen zum Ablauf einer Behandlung und zur Kostenerstattung.</p>
+        <p class="section-intro">Der erste Schritt muss kein großer sein. Hier finden Sie alle Informationen zum Behandlungsablauf und zur Kostenerstattung.</p>
+
         <div class="ablauf-grid">
-          <div class="ablauf-step"><div class="ablauf-num">1</div><div><h3>Erstanfrage</h3><p>Sie nehmen per Telefon oder E-Mail Kontakt auf. Ich melde mich in der Regel innerhalb von zwei Werktagen.</p></div></div>
-          <div class="ablauf-step"><div class="ablauf-num">2</div><div><h3>Erstgespräch (Probatorik)</h3><p>Im ersten Gespräch lernen wir uns kennen. Ich höre zu, Sie erzählen, was Sie bewegt – ohne Erwartungsdruck.</p></div></div>
-          <div class="ablauf-step"><div class="ablauf-num">3</div><div><h3>Diagnostik &amp; Zielfindung</h3><p>Gemeinsam klären wir Ihr Anliegen, mögliche Diagnosen und was Sie sich von der Therapie erhoffen.</p></div></div>
-          <div class="ablauf-step"><div class="ablauf-num">4</div><div><h3>Therapieverlauf</h3><p>Wir arbeiten regelmäßig zusammen – in der Regel 50 Minuten pro Stunde, wöchentlich oder zweiwöchentlich.</p></div></div>
-        </div>
-        <div class="kosten-box">
-          <div class="kosten-item">
-            <h4>Privatpatienten &amp; Beihilfe</h4>
-            <p>Die Kosten werden über Ihre private Krankenversicherung oder Beihilfestelle abgerechnet. Die Honorarhöhe richtet sich nach der Gebührenordnung für Psychotherapeuten (GOP). Bitte prüfen Sie vorab den Leistungsumfang Ihres Versicherungsvertrages.</p>
+          <div class="ablauf-step">
+            <div class="ablauf-num" aria-hidden="true">1</div>
+            <div>
+              <h3>Erstgespräch</h3>
+              <p>Das Erstgespräch dient dem persönlichen Kennenlernen. Wir besprechen Ihr Anliegen und klären, ob eine Zusammenarbeit sinnvoll ist.</p>
+            </div>
           </div>
-          <div class="kosten-item">
-            <h4>Selbstzahler</h4>
-            <p>Selbstzahlende zahlen direkt nach jeder Sitzung. Der Stundensatz beträgt [Betrag] € pro 50-Minuten-Einheit. Auf Wunsch stelle ich eine Quittung für steuerliche Zwecke aus. Bitte sprechen Sie mich auf Ermäßigungsmöglichkeiten an.</p>
+          <div class="ablauf-step">
+            <div class="ablauf-num" aria-hidden="true">2</div>
+            <div>
+              <h3>Diagnostik</h3>
+              <p>Bei Bedarf erfolgt eine diagnostische Einordnung und daraufhin die Behandlungsplanung.</p>
+            </div>
+          </div>
+          <div class="ablauf-step">
+            <div class="ablauf-num" aria-hidden="true">3</div>
+            <div>
+              <h3>Therapie</h3>
+              <p>Die Therapie orientiert sich an Ihren individuellen Zielen und erfolgt in regelmäßigen Sitzungen à 50 Minuten.</p>
+            </div>
+          </div>
+          <div class="ablauf-step">
+            <div class="ablauf-num" aria-hidden="true">4</div>
+            <div>
+              <h3>Abschluss</h3>
+              <p>Gemeinsam bereiten wir das Ende der Therapie vor und sichern das Erreichte für Ihren Alltag.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="kosten-box">
+          <p class="section-label" style="margin-bottom:var(--space-4)">Kosten</p>
+          <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;font-style:italic;margin-bottom:var(--space-4)">Wer wird behandelt?</h3>
+          <p class="kosten-intro">Als Privatpraxis behandle ich <strong>Privatversicherte</strong>, <strong>Beihilfeberechtigte</strong> und <strong>Selbstzahler</strong>. Die Kosten richten sich nach der Gebührenordnung für Psychotherapeutinnen und Psychotherapeuten (GOP). Bitte informieren Sie sich vor Beginn der Behandlung über die Kostenübernahme durch Ihre Krankenversicherung.</p>
+
+          <div class="kosten-grid">
+            <div class="kosten-item">
+              <h4>Privatversicherte &amp; Beihilfe</h4>
+              <p>Privatversicherte und Beihilfeempfänger erhalten je nach abgeschlossenem Vertrag in der Regel die Kosten für eine Psychotherapie erstattet. Ich empfehle, sich im Vorfeld bei der Krankenversicherung zu informieren.</p>
+            </div>
+            <div class="kosten-item">
+              <h4>Selbstzahler</h4>
+              <p>Der Vorteil für Selbstzahler: Sämtliche Antragsformalitäten bei Krankenkassen und damit verbundene Wartezeiten entfallen. Es wird lediglich ein Behandlungsvertrag geschlossen. Sie erhalten nach den Sitzungen eine Rechnung.</p>
+            </div>
+          </div>
+
+          <h4 style="font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;color:var(--color-text);margin-top:var(--space-8);margin-bottom:var(--space-3)">Honorar nach GOP (aktuelle Sätze)</h4>
+          <table class="kosten-table" role="table">
+            <thead>
+              <tr><th>Ziffer</th><th>Leistung</th><th>Betrag</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>GOP 870</td><td>Probatorik und Langzeittherapie (50 Min.)</td><td>100,56 €</td></tr>
+              <tr><td>GOP 812a</td><td>Kurzzeit- und Akuttherapie (50 Min.)</td><td>134,50 €</td></tr>
+              <tr><td>GOP 801a</td><td>Erhebung des aktuellen psychischen Befundes (zzgl. zu jedem Einzelgespräch, außer Sprechstunden)</td><td>33,52 €</td></tr>
+              <tr><td>GOP 860</td><td>Biografische Anamnese (einmal während der Therapie)</td><td>123,34 €</td></tr>
+              <tr><td>GOP 85</td><td>Gutachten bei Umwandlung Kurzzeit- in Langzeittherapie</td><td>67,03 €</td></tr>
+            </tbody>
+          </table>
+
+          <div class="ausfall-box">
+            <p><strong>Ausfallhonorar:</strong> Nach Terminvereinbarung wird ein Zeitfenster für Sie geblockt. Bei Verhinderung ist bis spätestens 48 Stunden vor dem Termin abzusagen. Andernfalls wird ein Ausfallhonorar von 75,00 € fällig.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--alt" id="kontakt">
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+      <div class="container" style="max-width:680px">
+        <p class="section-label">Häufige Fragen</p>
+        <h2 class="section-title">Was Sie <em>wissen möchten</em></h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Wie lange dauert eine Therapiesitzung?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Eine Therapiesitzung dauert in der Regel 50 Minuten.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Wie schnell bekomme ich einen Termin?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Ich bemühe mich, Ihnen zeitnah einen Termin anzubieten. Als Privatpraxis entfallen die langen Wartezeiten, die bei Kassensitzen üblich sind.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Benötige ich eine Überweisung?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Nein. Sie können sich direkt ohne Überweisung an mich wenden.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Werden meine Daten vertraulich behandelt?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Ja. Ich unterliege der Schweigepflicht. Alle Informationen, die Sie mir anvertrauen, werden absolut vertraulich behandelt.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Ist Videosprechstunde möglich?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Videosprechstunde ist auf Nachfrage möglich. Die ersten zwei Sitzungen sollten jedoch im direkten persönlichen Kontakt stattfinden.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
       <div class="container">
         <div class="kontakt-inner">
           <div class="kontakt-info">
             <p class="section-label">Kontakt</p>
             <h2>Nehmen Sie <em>Kontakt auf</em></h2>
-            <p>Ich freue mich über Ihre Anfrage. Das Erstgespräch dient dem gegenseitigen Kennenlernen und ist unverbindlich.</p>
+            <p>Ich freue mich über Ihre Nachricht. Sie können mich per E-Mail kontaktieren. Sprechzeiten nach Vereinbarung.</p>
             <div class="kontakt-detail">
               <div class="kontakt-row">
-                <div class="kontakt-row-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.27 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.29 6.29l1.62-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-                <div class="kontakt-row-text"><strong>Telefon</strong>[Telefonnummer]</div>
+                <div class="kontakt-row-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="kontakt-row-text">
+                  <strong>E-Mail</strong>
+                  <a href="mailto:psych.k.bauer@online.de">psych.k.bauer@online.de</a>
+                </div>
               </div>
               <div class="kontakt-row">
-                <div class="kontakt-row-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                <div class="kontakt-row-text"><strong>E-Mail</strong>[E-Mail-Adresse]</div>
+                <div class="kontakt-row-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="kontakt-row-text">
+                  <strong>Adresse</strong>
+                  Martin-Luther-Str. 23, 01099 Dresden
+                </div>
               </div>
               <div class="kontakt-row">
-                <div class="kontakt-row-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                <div class="kontakt-row-text"><strong>Adresse</strong>[Straße &amp; Nr.], [PLZ] Dresden</div>
+                <div class="kontakt-row-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="kontakt-row-text">
+                  <strong>Sprechzeiten</strong>
+                  Nach Vereinbarung
+                </div>
               </div>
             </div>
+            <p class="kontakt-note">Bitte beachten Sie: Unverschlüsselte E-Mails können Sicherheitsrisiken bergen. Für sensible Gesundheitsdaten sprechen Sie mich bitte persönlich an.</p>
           </div>
-          <form class="kontakt-form" onsubmit="handleSubmit(event)" novalidate>
-            <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Ihr vollständiger Name" autocomplete="name" required></div>
-            <div class="form-group"><label for="email">E-Mail</label><input type="email" id="email" name="email" placeholder="ihre@email.de" autocomplete="email" required></div>
-            <div class="form-group"><label for="anliegen">Ihr Anliegen (optional)</label><textarea id="anliegen" name="anliegen" placeholder="Was beschäftigt Sie? Sie müssen hier noch nichts im Detail erklären."></textarea></div>
-            <div class="form-group"><label for="erreichbar">Beste Erreichbarkeit</label><input type="text" id="erreichbar" name="erreichbar" placeholder="z.B. werktags ab 17 Uhr"></div>
-            <p class="form-note">Ihre Angaben werden vertraulich behandelt und ausschließlich zur Terminvereinbarung verwendet. Kein Newsletterversand, keine Weitergabe an Dritte.</p>
-            <button type="submit" class="btn btn-primary" style="align-self:flex-start">Anfrage senden</button>
-          </form>
+          <div>
+            <div style="background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-xl);padding:var(--space-8)">
+              <h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;font-style:italic;margin-bottom:var(--space-2)">Dipl.-Psych. Kerstin Bauer</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-6);max-width:none">Psychologische Psychotherapeutin<br>Fachkunde Verhaltenstherapie</p>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2);max-width:none">Martin-Luther-Str. 23</p>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-6);max-width:none">01099 Dresden</p>
+              <a href="mailto:psych.k.bauer@online.de" class="btn btn-primary" style="width:100%;justify-content:center">E-Mail schreiben</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-copy">&copy; 2026 Psychotherapeutische Privatpraxis Dresden</p>
+      <p class="footer-copy">&copy; 2026 Privatpraxis für Psychotherapie Kerstin Bauer, Dresden</p>
       <ul class="footer-links">
         <li><a href="impressum-datenschutz.html#impressum">Impressum</a></li>
         <li><a href="impressum-datenschutz.html#datenschutz">Datenschutz</a></li>
@@ -295,6 +498,7 @@
   </footer>
 
   <script>
+    // Mobile Nav
     (function(){
       const btn=document.getElementById('mobile-toggle'),nav=document.getElementById('nav-links');
       if(btn&&nav)btn.addEventListener('click',()=>{
@@ -303,13 +507,21 @@
         btn.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
       });
     })();
-    function handleSubmit(e){
-      e.preventDefault();
-      const btn=e.target.querySelector('[type=submit]');
-      btn.textContent='Nachricht gesendet \u2713';
-      btn.disabled=true;
-      btn.style.background='var(--color-primary-active)';
-    }
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const item=btn.closest('.faq-item');
+        const wasOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i=>{
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded','false');
+        });
+        if(!wasOpen){
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+    });
   </script>
 </body>
 </html>
