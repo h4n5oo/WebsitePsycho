@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privatpraxis für Psychotherapie Kerstin Bauer – Dresden</title>
   <meta name="description" content="Privatpraxis für Psychotherapie Dipl.-Psych. Kerstin Bauer in Dresden. Behandlung für Privatversicherte, Beihilfeberechtigte und Selbstzahler.">
+  
+<!-- Favicon für Browser -->
+	<link rel="icon" href="favicon.png" type="image/png">
+
+<!-- Favicon für Apple Geräte (wird automatisch in größerer Größe erwartet) -->
+	<link rel="apple-touch-icon" href="favicon.png">
+	
+<meta property="og:type" content="website">
+<meta property="og:url" content=https://psychotherapie-kerstin-bauer.de/">
+<meta property="og:title" content="Privatpraxis für Psychotherapie Kerstin Bauer – Dresden">
+<meta property="og:description" content="Psychotherapeutische Begleitung für Erwachsene in Dresden. Behandlung für Privatversicherte, Beihilfeberechtigte und Selbstzahler.">
+<meta property="og:image" content=https://psychotherapie-kerstin-bauer.de/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content=https://psychotherapie-kerstin-bauer.de/">
+<meta name="twitter:title" content="Privatpraxis für Psychotherapie Kerstin Bauer – Dresden">
+<meta name="twitter:description" content="Psychotherapeutische Begleitung für Erwachsene in Dresden. Behandlung für Privatversicherte, Beihilfeberechtigte und Selbstzahler.">
+<meta name="twitter:image" content=https://psychotherapie-kerstin-bauer.de/og-image.png">
 
   <style>
     :root {
@@ -56,9 +75,7 @@
       --content-wide: 1160px;
     }
 
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -86,17 +103,13 @@
       height: auto;
     }
 
-    h1,
-    h2,
-    h3,
-    h4 {
+    h1, h2, h3, h4 {
       font-family: var(--font-display);
       line-height: 1.2;
       text-wrap: balance;
     }
 
-    p,
-    li {
+    p, li {
       max-width: 68ch;
       text-wrap: pretty;
     }
@@ -107,9 +120,7 @@
       transition: color var(--transition);
     }
 
-    a:hover {
-      color: var(--color-primary-hover);
-    }
+    a:hover { color: var(--color-primary-hover); }
 
     button {
       border: 0;
@@ -181,9 +192,7 @@
       font-size: var(--text-sm);
     }
 
-    .nav-links a:hover {
-      color: var(--color-text);
-    }
+    .nav-links a:hover { color: var(--color-text); }
 
     .nav-cta {
       padding: var(--space-2) var(--space-5);
@@ -213,16 +222,10 @@
       margin-inline: auto;
     }
 
-    .section {
-      padding-block: clamp(var(--space-12), 7vw, var(--space-24));
-    }
+    .section { padding-block: clamp(var(--space-12), 7vw, var(--space-24)); }
+    .section--alt { background: var(--color-surface); }
 
-    .section--alt {
-      background: var(--color-surface);
-    }
-
-    .section-label,
-    .hero-label {
+    .section-label, .hero-label {
       margin-bottom: var(--space-3);
       color: var(--color-primary);
       font-size: var(--text-xs);
@@ -238,8 +241,7 @@
       font-style: italic;
     }
 
-    .section-title em,
-    h1 em {
+    .section-title em, h1 em {
       font-weight: 600;
       font-style: normal;
     }
@@ -333,10 +335,7 @@
       gap: var(--space-4);
     }
 
-    .hero-card,
-    .angebot-card,
-    .kosten-box,
-    .contact-card {
+    .hero-card, .angebot-card, .kosten-box, .contact-card {
       padding: var(--space-6);
       background: var(--color-surface);
       border: 1px solid var(--color-divider);
@@ -344,8 +343,7 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .hero-card-icon,
-    .kontakt-row-icon {
+    .hero-card-icon, .kontakt-row-icon {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -361,8 +359,7 @@
       margin-bottom: var(--space-3);
     }
 
-    .hero-card h3,
-    .angebot-card h3 {
+    .hero-card h3 {
       margin-bottom: var(--space-2);
       color: var(--color-text);
       font-family: var(--font-body);
@@ -370,8 +367,7 @@
       font-weight: 600;
     }
 
-    .hero-card p,
-    .angebot-card p {
+    .hero-card p {
       max-width: none;
       color: var(--color-text-muted);
       font-size: var(--text-sm);
@@ -394,10 +390,31 @@
       transform: translateY(-2px);
     }
 
+    .angebot-card h3 {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      margin-bottom: var(--space-2);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .angebot-card p {
+      max-width: none;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+
     .angebot-dot {
+      display: inline-block;
+      flex: 0 0 8px;
       width: 8px;
       height: 8px;
-      margin-bottom: var(--space-4);
+      margin-top: 0.42em;
       background: var(--color-primary);
       border-radius: var(--radius-full);
     }
@@ -424,8 +441,7 @@
       border-radius: var(--radius-xl);
     }
 
-    .ueber-content h2,
-    .kontakt-info h2 {
+    .ueber-content h2, .kontakt-info h2 {
       margin-bottom: var(--space-6);
       font-size: var(--text-xl);
       font-weight: 400;
@@ -453,9 +469,7 @@
       border-top: 1px solid var(--color-divider);
     }
 
-    .werdegang-item:last-child {
-      border-bottom: 1px solid var(--color-divider);
-    }
+    .werdegang-item:last-child { border-bottom: 1px solid var(--color-divider); }
 
     .werdegang-year {
       color: var(--color-primary);
@@ -522,17 +536,14 @@
       font-weight: 600;
     }
 
-    .ablauf-step p,
-    .kosten-item p {
+    .ablauf-step p, .kosten-item p {
       max-width: none;
       color: var(--color-text-muted);
       font-size: var(--text-sm);
       line-height: 1.7;
     }
 
-    .kosten-box {
-      margin-top: var(--space-12);
-    }
+    .kosten-box { margin-top: var(--space-12); }
 
     .kosten-box h3 {
       margin-bottom: var(--space-4);
@@ -581,13 +592,8 @@
       margin-top: var(--space-8);
     }
 
-    .faq-item {
-      border-top: 1px solid var(--color-divider);
-    }
-
-    .faq-item:last-child {
-      border-bottom: 1px solid var(--color-divider);
-    }
+    .faq-item { border-top: 1px solid var(--color-divider); }
+    .faq-item:last-child { border-bottom: 1px solid var(--color-divider); }
 
     .faq-question {
       display: flex;
@@ -608,9 +614,7 @@
       transition: transform var(--transition);
     }
 
-    .faq-item.open .faq-question svg {
-      transform: rotate(45deg);
-    }
+    .faq-item.open .faq-question svg { transform: rotate(45deg); }
 
     .faq-answer {
       max-height: 0;
@@ -618,9 +622,7 @@
       transition: max-height 0.3s ease;
     }
 
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-    }
+    .faq-item.open .faq-answer { max-height: 300px; }
 
     .faq-answer p {
       max-width: none;
@@ -718,8 +720,7 @@
       margin-inline: auto;
     }
 
-    .footer-copy,
-    .footer-links a {
+    .footer-copy, .footer-links a {
       color: var(--color-text-faint);
       font-size: var(--text-xs);
     }
@@ -732,33 +733,15 @@
 
     /* Responsive */
     @media (max-width: 900px) {
-      .hero-inner,
-      .ueber-inner,
-      .kontakt-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        display: none;
-      }
-
-      .ueber-aside {
-        position: static;
-      }
-
-      .ueber-portrait {
-        max-width: 320px;
-      }
+      .hero-inner, .ueber-inner, .kontakt-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .ueber-aside { position: static; }
+      .ueber-portrait { max-width: 320px; }
     }
 
     @media (max-width: 768px) {
-      .nav {
-        position: relative;
-      }
-
-      .nav-links {
-        display: none;
-      }
+      .nav { position: relative; }
+      .nav-links { display: none; }
 
       .nav-links.open {
         position: absolute;
@@ -780,42 +763,29 @@
         justify-content: center;
       }
 
-      .ablauf-grid,
-      .kosten-grid {
-        grid-template-columns: 1fr;
-      }
+      .ablauf-grid, .kosten-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
-      .nav,
-      .footer {
-        padding-inline: var(--space-4);
-      }
-
-      .container,
-      .hero-inner {
-        padding-inline: var(--space-4);
-      }
+      .nav, .footer { padding-inline: var(--space-4); }
+      .container, .hero-inner { padding-inline: var(--space-4); }
 
       .werdegang-item {
         grid-template-columns: 1fr;
         gap: var(--space-1);
       }
 
-      .hero-cards-row {
-        grid-template-columns: 1fr;
-      }
+      .hero-cards-row { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         scroll-behavior: auto !important;
         transition: none !important;
       }
     }
   </style>
+  
 </head>
 
 <body>
@@ -892,12 +862,30 @@
         <p class="section-intro">Je nach Anliegen erfolgt die Behandlung im Rahmen einer Einzelpsychotherapie.</p>
 
         <div class="angebot-grid">
-          <article class="angebot-card"><div class="angebot-dot"></div><h3>Depressionen, Burnout &amp; Erschöpfungssyndrom</h3><p>Anhaltende Niedergeschlagenheit, Antriebslosigkeit, innere Leere und chronische Überlastung.</p></article>
-          <article class="angebot-card"><div class="angebot-dot"></div><h3>Angst- und Panikstörungen</h3><p>Generalisierte Ängste, Panikattacken, soziale Phobien und spezifische Phobien.</p></article>
-          <article class="angebot-card"><div class="angebot-dot"></div><h3>Anpassungsstörungen &amp; Belastungsreaktionen</h3><p>Schwierige Lebensereignisse, Krisen und akute Belastungssituationen.</p></article>
-          <article class="angebot-card"><div class="angebot-dot"></div><h3>Traumafolgestörungen</h3><p>Schonende Begleitung nach einschneidenden Erfahrungen und posttraumatischen Belastungen.</p></article>
-          <article class="angebot-card"><div class="angebot-dot"></div><h3>Zwangsstörungen</h3><p>Zwangsgedanken und Zwangshandlungen, die den Alltag beeinträchtigen.</p></article>
-          <article class="angebot-card"><div class="angebot-dot"></div><h3>Psychosomatische Störungen &amp; weitere</h3><p>Wenn Körper und Seele gemeinsam leiden.</p></article>
+          <article class="angebot-card">
+            <h3><span class="angebot-dot" aria-hidden="true"></span><span>Depressionen, Burnout &amp; Erschöpfungssyndrom</span></h3>
+            <p>Anhaltende Niedergeschlagenheit, Antriebslosigkeit, innere Leere und chronische Überlastung.</p>
+          </article>
+          <article class="angebot-card">
+            <h3><span class="angebot-dot" aria-hidden="true"></span><span>Angst- und Panikstörungen</span></h3>
+            <p>Generalisierte Ängste, Panikattacken, soziale Phobien und spezifische Phobien.</p>
+          </article>
+          <article class="angebot-card">
+            <h3><span class="angebot-dot" aria-hidden="true"></span><span>Anpassungsstörungen &amp; Belastungsreaktionen</span></h3>
+            <p>Schwierige Lebensereignisse, Krisen und akute Belastungssituationen.</p>
+          </article>
+          <article class="angebot-card">
+            <h3><span class="angebot-dot" aria-hidden="true"></span><span>Traumafolgestörungen</span></h3>
+            <p>Schonende Begleitung nach einschneidenden Erfahrungen und posttraumatischen Belastungen.</p>
+          </article>
+          <article class="angebot-card">
+            <h3><span class="angebot-dot" aria-hidden="true"></span><span>Zwangsstörungen</span></h3>
+            <p>Zwangsgedanken und Zwangshandlungen, die den Alltag beeinträchtigen.</p>
+          </article>
+          <article class="angebot-card">
+            <h3><span class="angebot-dot" aria-hidden="true"></span><span>Psychosomatische Störungen &amp; weitere</span></h3>
+            <p>Wenn Körper und Seele gemeinsam leiden sowie weitere psychische Erkrankungen.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -906,7 +894,7 @@
       <div class="container">
         <div class="ueber-inner">
           <aside class="ueber-aside">
-            <img class="ueber-portrait" src="https://psychotherapie-kerstin-bauer.de/Kerstin.webp" alt="Dipl.-Psych. Kerstin Bauer, Psychologische Psychotherapeutin in Dresden" width="420" height="560" loading="eager" decoding="async">
+            <img class="ueber-portrait" src="Kerstin.webp" alt="Dipl.-Psych. Kerstin Bauer, Psychologische Psychotherapeutin in Dresden" width="420" height="560" loading="eager" decoding="async">
           </aside>
 
           <div class="ueber-content">
@@ -1017,7 +1005,7 @@
             <h3>Dipl.-Psych. Kerstin Bauer</h3>
             <p>Psychologische Psychotherapeutin<br>Fachkunde Verhaltenstherapie</p>
             <p>Martin-Luther-Str. 23<br>01099 Dresden</p>
-            <a class="btn btn-primary" href="mailto:kontakt@psychotherapie-kerstin-bauer.de">E-Mail schreiben</a>
+            <a class="btn btn-primary" href="mailto:kontakt@psychotherapie-kerstin-bauer.de ">E-Mail schreiben</a>
             <a class="btn btn-ghost" href="tel:+4935185096199">Anrufen</a>
           </aside>
         </div>
